@@ -150,7 +150,6 @@ function  removeWatch(_watchbrand,Status) {
 }
 
 function swapcheckbox(watchbrand,state,Status){
-    console.log("hello")
     allData = allData.map( (dataItem) =>{
         if(watchbrand == dataItem.name){
             dataItem.isActive = state;

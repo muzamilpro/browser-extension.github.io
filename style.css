@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(71, 61, 61);
+}
+
+
+.cantainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.setting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(244, 243, 243);
+    color: rgb(37, 37, 37);
+    border-radius: 20px;
+    font-size: 30px;
+    background-color: rgb(143, 138, 138);
+    cursor: pointer;
+}
+
+.setting:hover{
+    background-color: rgb(203, 193, 193);
+    color:rgb(56, 3, 3) ;
+}
+
+.all{
+    width: 4rem;
+}
+
+.favourite{
+    width: 10rem;
+}
+
+.unFavourite{
+    width: 13rem;
+}
+
+.imageOfWatches{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-wrap: wrap;
+}
+
+.watchImage{
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+    opacity: 0.5;
+}
+
+.watchImage:hover{
+    opacity: 1;
+}
+
+.part{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(96, 91, 91);
+    height: 100px;
+    margin-bottom: 2rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px ;
+}
+
+.headingOfWatch{
+    font-size: 30px;
+}
+
+.paraOfWatch{
+    font-size: 20px;
+}
+
+.part2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    top: 0.9rem;
+    width: 39px;
+    height: 22px;
+    bottom: 10px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.7;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: rgb(71, 61, 61);
+    opacity: 0.5;
+}
+
+input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+.button{
+    background-color: rgb(49, 45, 45);
+    color: azure;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    top: 1rem;
+}
+
+.button:hover{
+    background-color: rgb(168, 164, 164);
+    color: black;
+}
+
+.watch{
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideInRight 2s forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
